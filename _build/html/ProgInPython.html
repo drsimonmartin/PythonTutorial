@@ -1,0 +1,726 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Programming (in python) &#8212; MPP001 Research Methods - Python Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ProgInPython';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lab Exercises" href="LabExercises.html" />
+    <link rel="prev" title="Introduction" href="GettingStarted.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="IntroNB.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="MPP001 Research Methods - Python Introduction - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="MPP001 Research Methods - Python Introduction - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="IntroNB.html">
+                    Welcome to your Python journey
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Introduction</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming (in python)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LabExercises.html">Lab Exercises</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FProgInPython.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ProgInPython.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Programming (in python)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-how-many-cans-of-paint">Example: how many cans of paint?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-files">Working with files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-building-blocks-of-computer-code">The building blocks of computer code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-out-more-about-python">Finding out more about python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-challenges">Coding challenges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spot-the-difference">Spot the difference</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-in-python">
+<h1>Programming (in python)<a class="headerlink" href="#programming-in-python" title="Permalink to this heading">#</a></h1>
+<p>If you are completely new to python then have a look through the syntax section on this page <a class="reference external" href="https://realpython.com/python-first-steps/#the-basic-python-syntax">https://realpython.com/python-first-steps/</a>. Syntax tells you about the rules for writing a computer language. When you begin programming you will probably spend most time getting this right. Do not worry about remembering details from that web link – you’ll learn what you need through practice on this module. Hopefully you can see that python code is reasonably easy to read/understand. We are now going to look at how we can use python to “do stuff” i.e. write programs.</p>
+<section id="algorithms">
+<h2>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this heading">#</a></h2>
+<p>There are two absolutely key steps in writing any computer program (this applies to any programming language):</p>
+<ol class="arabic simple">
+<li><p>Understanding what it is you want to do</p></li>
+<li><p>Breaking this down into individual steps</p></li>
+</ol>
+<p>If you can do these for the problem in hand then the process of writing the code is usually straightforward.</p>
+<p>Put together these steps allow you to develop an algorithm for the problem you are working on. In formal computer science there is more to it than this, but we need to be pragmatic and get on with solving problems.</p>
+<p>For MPP001 step 1 should be straightforward. As you get more ambitious with programming it can be tricky to define (and understand sufficiently well) what it is you want to do. Questions you should ask yourself include:</p>
+<ul class="simple">
+<li><p>What is the starting point (what information do I know)?</p></li>
+<li><p>What result(s) should be returned/output?</p></li>
+<li><p>What calculations etc are necessary</p></li>
+<li><p>Are there any limits on the input/output?</p></li>
+</ul>
+<p>As you gain experience with programming you will develop you own list and learn to adjust it to the situation.</p>
+<p>Step 2 is a vital step that has to happen before you begin to write the code. With a little practice you will be able to do this step in your head for simple problems. However, for anything involving more than a handful of lines of code it is best to write out the steps and refine them.</p>
+<p>Of course, there are other stages – testing, optimisation/refinement, etc. but for now these are enough to get going.</p>
+<section id="example-how-many-cans-of-paint">
+<h3>Example: how many cans of paint?<a class="headerlink" href="#example-how-many-cans-of-paint" title="Permalink to this heading">#</a></h3>
+<p>You are tasked with working out how many cans of paint are required to coat the sides and top of a tank of diameter <span class="math notranslate nohighlight">\(5m\)</span> and height <span class="math notranslate nohighlight">\(8m\)</span> if each can covers <span class="math notranslate nohighlight">\(2.5m^2\)</span>.</p>
+<p><strong>Step one</strong>:
+Inputs: diameter, Height, coverage per can. (limits: all should be above zero)</p>
+<p>Outputs: Number of cans (limits: should be an integer)</p>
+<p>Equations:
+the surface area of a cylinder is given by:</p>
+<div class="math notranslate nohighlight">
+\[ \pi\times \textrm{diameter}\times \textrm{height}\]</div>
+<p>and the area of an end is:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\pi\times \textrm{diameter}^2}{4}\]</div>
+<p>the number of cans will be given by:</p>
+<div class="math notranslate nohighlight">
+\[N=\frac{\textrm{total surface area}}{\textrm{coverage per can}}\]</div>
+<p><strong>Step two</strong>
+A first stage-wise step through of the process could be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Store input values in sensibly named variables
+2. Calculate number of cans
+3. Output results
+</pre></div>
+</div>
+<p>This could usefully be refined to:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Store input values in sensibly named variables
+	* Diameter = 5, Height = 8, Coverage = 2.5
+2. Calculate number of cans
+	* Ncans = (Surface area)/Coverage
+3. Output results
+	* Ncans needs to be rounded up
+</pre></div>
+</div>
+<p>This is about ready to turn into python code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># code to calculate number of cans required to paint sides and top of cylinder</span>
+<span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">math</span> <span class="c1"># provides math functions and constants</span>
+<span class="c1"># define values. Names should be self explanatory</span>
+<span class="n">Diameter</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">Height</span> <span class="o">=</span> <span class="mf">8.0</span>
+<span class="n">Coverage</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">NumCans</span> <span class="o">=</span> <span class="mf">0.</span> <span class="c1"># make sure that start from zero (good practice)</span>
+<span class="c1"># Now calculate the number of cans required</span>
+<span class="c1"># divide surface area of cylinder side + top by coverage per can</span>
+<span class="n">NumCans</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">Diameter</span><span class="o">*</span><span class="n">Height</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">Diameter</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mf">4.</span><span class="p">)</span><span class="o">/</span><span class="n">Coverage</span>
+<span class="c1"># Output Result</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You require </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">NumCans</span><span class="p">)</span><span class="si">}</span><span class="s1"> cans of paint&#39;</span><span class="p">)</span> <span class="c1"># ceil rounds to the next integer</span>
+
+</pre></div>
+</div>
+<p>Notice the use of comments (anything after a <code class="docutils literal notranslate"><span class="pre">#</span></code> is a comment and does nothing code wise). These are a way to annotate the code so that it is easier to follow. It is difficult to have too many comments in your code especially if it contains more than a couple of active lines of code.</p>
+<p>Now more complex problems will require more stages and you may go through three or four refinement stages before starting to convert to code. It is tempting to shortcut this, but you’ll be a better programmer for taking the extra time. In fact you’ll probably take less time in the end as there’ll be less wrong with your code when you write it. Also, you may find that more refinement still is needed as you start the coding – don’t worry about this it is bound to happen. As you get more practiced you will get used to making the judgement.</p>
+<p>You may feel that you want to jump into coding after Stage One and a lot of the time this will work OK for simple problems. However, it is good to get into the habit of doing both steps you will benefit in the medium term–especially if you want to evidence code development for your project.</p>
+</section>
+</section>
+<section id="working-with-files">
+<h2>Working with files<a class="headerlink" href="#working-with-files" title="Permalink to this heading">#</a></h2>
+<p>So far, we have typed in code to a python session and observed the results. For anything involving more than two or three lines of code we need a way to save/recall code. Python code is stored in files with names that end in <code class="docutils literal notranslate"><span class="pre">.py</span></code> - this is the equivalent of <code class="docutils literal notranslate"><span class="pre">.docx</span></code> for Word files.</p>
+<p>The left hand section of the screen in Spyder is for entering and editing code (usually python). You can enter python code over multiple lines.</p>
+<p>To run the code, first save the file, then click the triangle at the middle/top of the screen section. The results of most of your code will appear in the console window. Any graphs/images you work with will appear in the section above the console.</p>
+</section>
+<section id="the-building-blocks-of-computer-code">
+<h2>The building blocks of computer code<a class="headerlink" href="#the-building-blocks-of-computer-code" title="Permalink to this heading">#</a></h2>
+<p>In order to get a program with a useful level of complexity there are a few key building blocks. These are common to most computer languages (there will be syntax differences–for instance, python uses indentation of code to separate blocks whilst many others use curly brackets i.e. {}. The ones key to introductory python programming are described below.</p>
+<section id="conditional-statements">
+<h3>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this heading">#</a></h3>
+<p>These check whether a condition is met and perform different code based on this check. The classic structure is the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement which will execute the following code if the condition tested evaluates to TRUE. <code class="docutils literal notranslate"><span class="pre">if</span></code> statements can be extended in a number of ways: an <code class="docutils literal notranslate"><span class="pre">else</span></code> block adds code that is only run if the condition is not met. In python there is also an <code class="docutils literal notranslate"><span class="pre">elif</span></code> command that can be thought of as ‘else if…’</p>
+</section>
+<section id="loops">
+<h3>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h3>
+<p>These are used to repeat a block of code either a fixed number of times (usually the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop) or until some condition is met (<code class="docutils literal notranslate"><span class="pre">while</span></code> loop).</p>
+<p>In most computer languages the for-loop increments/decrements a numeric variable through a range of values. Here is a C example</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Loop in C language - DO NOT copy to python</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Do not try and run this code in Spyder (or any other python system)  Hopefully you can see that this would print out the integers from 1 to 10.</p>
+<p>In python the loop goes through a list of values. The must all be the same type, but beyond that there are very few limits. So this example prints out the primary colours:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colours</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">colour</span> <span class="ow">in</span> <span class="n">colours</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">colour</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>red
+green
+blue
+</pre></div>
+</div>
+</div>
+</div>
+<p>The C example above could be reproduced in python with something like:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></div>
+</div>
+</div>
+</div>
+<p>range() is a function that returns a list of numbers. It defaults to starting at 0, but this can be changed (e.g. <code class="docutils literal notranslate"><span class="pre">range(1,11)</span></code> would give 1, 2, …, 10).</p>
+<p><strong>Top tip</strong> Loops are often used for calculating sums, products, etc. make sure the variable that you are storing the result in starts from where it is supposed to. For sums (<code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i+NextValue</span></code>) this will usually be zero. For products (<code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">y*NextValue</span></code>) one is a better choice.</p>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<p>These are blocks of code that you send values to and the block returns one or more values. <code class="docutils literal notranslate"><span class="pre">print()</span></code> is an example of a built-in function. You can add your own functions to python code either by importing them from another file/script or by defining them in the script you are working on.</p>
+<p>A minimal python example would be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">HelloWorld</span><span class="p">():</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note the code after the <code class="docutils literal notranslate"><span class="pre">def</span></code> line is indented – this is how python tracks the extent of the current code block. You can see a similar use of indenting in the for loop above.</p>
+<p>The brackets after <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code> can take the names of arguments (parameters) that are to be passed to the function. E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Quotient</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which could be called by <code class="docutils literal notranslate"><span class="pre">Quotient(2,3)</span></code>. Note the order of arguments matters.</p>
+<p>You can give arguments default values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Calling this with <code class="docutils literal notranslate"><span class="pre">Sum(4)</span></code> will return <code class="docutils literal notranslate"><span class="pre">7</span></code> whereas <code class="docutils literal notranslate"><span class="pre">Sum(4,2)</span></code> will return <code class="docutils literal notranslate"><span class="pre">6</span></code>. Note all arguments after the first with a default value must have default values.</p>
+</section>
+</section>
+<section id="finding-out-more-about-python">
+<h2>Finding out more about python<a class="headerlink" href="#finding-out-more-about-python" title="Permalink to this heading">#</a></h2>
+<p>An excellent resource for getting started in python is week one of this online course: <a class="reference external" href="https://lukas-snoek.com/introPy/index.html">introPy</a></p>
+<p>There are lots of other learning resources available via the internet. <a class="reference external" href="https://www.linkedin.com/learning/">LinkedIn Learning</a> (for which you have access via the University) has lots of professionally created courses to choose from and Google and/or YouTube may have one or two things of interest as well.</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<section id="coding-challenges">
+<h3>Coding challenges<a class="headerlink" href="#coding-challenges" title="Permalink to this heading">#</a></h3>
+<p>For each of the following use the development process outlined above. You may need to ask for help and/or search for information on some of the coding needed.</p>
+<ol class="arabic simple">
+<li><p>Write a function that returns the volume of a pipe of length <code class="docutils literal notranslate"><span class="pre">l</span></code>, outer diameter <code class="docutils literal notranslate"><span class="pre">D</span></code>, and inner diameter <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p></li>
+<li><p>Adapt the above program so that it gives the result to three decimal places and to three significant figures.</p></li>
+<li><p>Write  a function that calculates the sum of the first <code class="docutils literal notranslate"><span class="pre">N</span></code> odd integers. For example: if <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">5</span></code> then the sum is <code class="docutils literal notranslate"><span class="pre">25</span></code> (i.e. 1 + 3 + 5 + 7 + 9 =25).</p></li>
+<li><p>Write a program that uses a loop to call the function you created for exercise 3 for values of N from one to ten. What do you notice about the sums?</p></li>
+</ol>
+</section>
+<section id="spot-the-difference">
+<h3>Spot the difference<a class="headerlink" href="#spot-the-difference" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library has a <code class="docutils literal notranslate"><span class="pre">ceil()</span></code> function that has a sublte difference to the one in the <code class="docutils literal notranslate"><span class="pre">math</span></code> library. Can you spot this difference? What impact might it have on your code?</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="GettingStarted.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="LabExercises.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab Exercises</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-how-many-cans-of-paint">Example: how many cans of paint?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-files">Working with files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-building-blocks-of-computer-code">The building blocks of computer code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-out-more-about-python">Finding out more about python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-challenges">Coding challenges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spot-the-difference">Spot the difference</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simon Martin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

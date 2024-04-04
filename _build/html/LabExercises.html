@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lab Exercises &#8212; MPP001 Research Methods - Python Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'LabExercises';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Programming (in python)" href="ProgInPython.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="IntroNB.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="MPP001 Research Methods - Python Introduction - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="MPP001 Research Methods - Python Introduction - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="IntroNB.html">
+                    Welcome to your Python journey
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Introduction</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ProgInPython.html">Programming (in python)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab Exercises</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLabExercises.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/LabExercises.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lab Exercises</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-1-getting-started">Week 1: Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-2-solving-equations">Week 2: Solving equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-note-about-cramer-s-rule">Important Note about Cramer’s rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-3-code-hacking">Week 3: Code hacking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-4-data-fitting">Week 4 Data fitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-least-squares-fitting">Ordinary Least Squares fitting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-least-squares-fitting">Weighted Least Squares fitting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-5-code-hacking">Week 5 Code hacking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problem">Bonus problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-6-getting-responses">Week 6: Getting responses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-7-symbolic-maths">Week 7: Symbolic Maths</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-s">Exercise(s)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-exercises">
+<h1>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this heading">#</a></h1>
+<p>These exercises are designed to help you get to grips with python and with learning how to solve problems with computers. They are layed out roughly week-by-week, but do not worry if some take you a little longer. The important thing is to learn from them.</p>
+<section id="week-1-getting-started">
+<h2>Week 1: Getting started<a class="headerlink" href="#week-1-getting-started" title="Permalink to this heading">#</a></h2>
+<p>Go through the notes and exercises in First Steps and Programming chapters of these notes.</p>
+</section>
+<section id="week-2-solving-equations">
+<h2>Week 2: Solving equations<a class="headerlink" href="#week-2-solving-equations" title="Permalink to this heading">#</a></h2>
+<p>A system of two equations such as:</p>
+<div class="math notranslate nohighlight">
+\[
+aX + bY = p 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+cX + dY = q
+\]</div>
+<p>Can be solved using Cramer’s rule:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp; b \\ c &amp; d\end{vmatrix}}, Y = \frac{\begin{vmatrix}a &amp; p\\c &amp;q\end{vmatrix}}{\begin{vmatrix}a &amp; b \\ c &amp; d\end{vmatrix}} \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\begin{vmatrix}a &amp; b \\ c &amp; d\end{vmatrix}\)</span> is given by <span class="math notranslate nohighlight">\(a\times d - c\times b\)</span> etc.</p>
+<p>Develop python code that implements this – use the development process.</p>
+<section id="important-note-about-cramer-s-rule">
+<h3>Important Note about Cramer’s rule<a class="headerlink" href="#important-note-about-cramer-s-rule" title="Permalink to this heading">#</a></h3>
+<p>Never try to use it for anything useful. Maths teachers like to demonstrate it and it makes for trivial exam questions that just take time to do, but it has so many problems that it has no use in computational methods. See if you can think what the problems might be?</p>
+<p>Solving sytems of equations is a very important part of technical computing there are lots of efficient and reliable ways to do this. Make use of these methods. A good example is provided by numpy: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html">numpy.linalg.solve</a></p>
+</section>
+</section>
+<section id="week-3-code-hacking">
+<h2>Week 3: Code hacking<a class="headerlink" href="#week-3-code-hacking" title="Permalink to this heading">#</a></h2>
+<p>Modifying existing code to solve a new problem is a useful and effective way to learn programming skills. This week’s problem explores how to make code operate a repeated number of times to generate a useful statistical result.</p>
+<p>The code in the file ‘<a class="reference external" href="http://NormalDistribution.py">NormalDistribution.py</a>’ calculates a set of data associated with a given normal distribution (a normal distribution is completely defined by its mean and standard deviation).</p>
+<ul class="simple">
+<li><p>Modify this code so that it creates 1,000 such distributions each containing 100 points.</p>
+<ul>
+<li><p>Hint: you will need to use a loop</p></li>
+</ul>
+</li>
+<li><p>Plot the a histogram of the distribution of the means for these 1,000 cases.</p></li>
+<li><p>Calculate the percentage of cases where the 95% confidence interval contains the true mean of the distribution.</p>
+<ul>
+<li><p>Draw conclusions from these results.</p></li>
+</ul>
+</li>
+</ul>
+<p>In order to achieve these outcomes you should apply the programme development method outlined in the introductory python notes i.e plan the steps before implementing them in python.</p>
+</section>
+<section id="week-4-data-fitting">
+<h2>Week 4 Data fitting<a class="headerlink" href="#week-4-data-fitting" title="Permalink to this heading">#</a></h2>
+<section id="ordinary-least-squares-fitting">
+<h3>Ordinary Least Squares fitting<a class="headerlink" href="#ordinary-least-squares-fitting" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Review your previous studies and find some lab data suitable for fitting with a least squares process. If you do not have any readily available use the file ‘LSdata.csv’ which is available on the Learn page</p></li>
+<li><p>Develop a python program that:</p>
+<ol class="arabic simple">
+<li><p>Reads the data in from a .csv, or .xlsx file</p></li>
+<li><p>Performs a least squares fit to the data (ignore any weighting at this stage)</p></li>
+<li><p>Displays the data and the line of best fit</p></li>
+<li><p>Calculate and display a measure of the fit quality.</p></li>
+</ol>
+</li>
+<li><p>Explore the effect changing the number of fit parameters βi . Start with a linear fit and increase the polynomial in steps of one up to at least β4. What happens to the fit quality as you increase the number of factors? Is this useful?</p></li>
+</ol>
+</section>
+<section id="weighted-least-squares-fitting">
+<h3>Weighted Least Squares fitting<a class="headerlink" href="#weighted-least-squares-fitting" title="Permalink to this heading">#</a></h3>
+<p>Make a <strong>copy</strong> of your code from above and adapt it to perform a weighted least squares fit.</p>
+<ol class="arabic simple">
+<li><p>Start with equal weights for the data points.</p>
+<ul class="simple">
+<li><p>How does the new fit compare to the unweighted result?</p></li>
+<li><p>Is this what you expect?</p></li>
+</ul>
+</li>
+<li><p>Add unequal weights to the data and see how the fit quality changes. Ideally you will have the standard deviations for your data to use as the weights, but make up some plausible values if not. You could use the <a class="reference external" href="http://NormalDistribution.py">NormalDistribution.py</a> code to generate values for the weights. Alternatively, try giving one or two data points a much lower weighting than the others.</p></li>
+</ol>
+</section>
+</section>
+<section id="week-5-code-hacking">
+<h2>Week 5 Code hacking<a class="headerlink" href="#week-5-code-hacking" title="Permalink to this heading">#</a></h2>
+<p>The file ‘<a class="reference external" href="http://SelfAvoidingWalk.py">SelfAvoidingWalk.py</a>’ contains the functions ‘myopic_saw(n)’ and ‘plot_saw(n)’ . The second function calls the first function and plots out the result. The ‘myopic_saw’ function simulates a random walk model of polymers. It uses a grid struture for the polymer bond directions and simulates a chain as being made up of n random steps on the grid. The chain is self avoiding and cannot intersect with itself. The function myopic_saw(n) will halt if a chain cannot add a bond without colliding with itself.</p>
+<p>Adapt ‘plot_saw(n)’ so that it calls myopic_saw(n) repeatedly until it suceeds in generating a self-avoiding-walk of the requested length and then plots this walk out.</p>
+<p>Use n=200 to test you code.</p>
+<section id="bonus-problem">
+<h3>Bonus problem<a class="headerlink" href="#bonus-problem" title="Permalink to this heading">#</a></h3>
+<p>Make a copy of your code and modify it to time how long the function plot_saw(n) takes to run. Hint: google the time library for python.</p>
+<p>Time how long it takes to find chains of 10, 100, and 1000 units in length. For each length produce the average time taken.</p>
+</section>
+</section>
+<section id="week-6-getting-responses">
+<h2>Week 6: Getting responses<a class="headerlink" href="#week-6-getting-responses" title="Permalink to this heading">#</a></h2>
+<p>It is useful for a python program to be able to ask for a parameter value to use rather than keep modifying the code each time you run it. The ‘input()’’ function is handy for this.</p>
+<section id="exercises">
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Make a copy of the Normal Distribution code (see Learn) and modify it so that it asks for and accepts the mean and standard distribution values to be used.</p></li>
+<li><p>Extend the code so that it repeats until the user decides to finish.</p></li>
+<li><p>Add checks of the input values to ensure they are valid e.g. the SD must be <span class="math notranslate nohighlight">\(\gt\)</span> 0</p></li>
+</ol>
+</section>
+</section>
+<section id="week-7-symbolic-maths">
+<h2>Week 7: Symbolic Maths<a class="headerlink" href="#week-7-symbolic-maths" title="Permalink to this heading">#</a></h2>
+<p>This week’s exercise explores how to perform symbolic maths in python. We are going to do this using the ‘sympy’ library.</p>
+<p>Read the document CoM_Algebra.pdf (MPP001 Learn page). This is a short set of notes that shows how python can be used to integrate various mathematical expressions.</p>
+<section id="exercise-s">
+<h3>Exercise(s)<a class="headerlink" href="#exercise-s" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Reproduce the maths in the PDF CoM_Algebra.pdf .</p></li>
+<li><p>Change the function(s) that are integrated. Are the results what you expect?</p></li>
+<li><p>Differentiate the results of the integrations you have done. Done you get back to the original expressions?</p></li>
+<li><p>Explore other tools that sympy offers. ‘expand()’ and ‘simplify()’ are good starting points.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ProgInPython.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Programming (in python)</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-1-getting-started">Week 1: Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-2-solving-equations">Week 2: Solving equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-note-about-cramer-s-rule">Important Note about Cramer’s rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-3-code-hacking">Week 3: Code hacking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-4-data-fitting">Week 4 Data fitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-least-squares-fitting">Ordinary Least Squares fitting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-least-squares-fitting">Weighted Least Squares fitting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-5-code-hacking">Week 5 Code hacking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problem">Bonus problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-6-getting-responses">Week 6: Getting responses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-7-symbolic-maths">Week 7: Symbolic Maths</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-s">Exercise(s)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simon Martin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

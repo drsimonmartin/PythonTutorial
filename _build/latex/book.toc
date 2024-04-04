@@ -1,0 +1,30 @@
+\selectlanguage *[]{english}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Starting a python session on Lab PCs.}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Make sure you have the right Python version}{3}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Python on you own computer}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}First steps in Python}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}file\sphinxhyphen {}based python}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Notebook\sphinxhyphen {}based python}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Hello World!}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Simple maths in python}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Beyond simple maths}{6}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}\sphinxstyleliteralintitle {\sphinxupquote {as library\_name}}}{6}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Exercises}{7}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Read the docs}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Programming (in python)}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Algorithms}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Example: how many cans of paint?}{10}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Working with files}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The building blocks of computer code}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Conditional statements}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Loops}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Functions}{12}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Finding out more about python}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Exercises}{13}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Coding challenges}{13}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Spot the difference}{13}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Notebooks with MyST Markdown}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}An example cell}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Create a notebook with MyST Markdown}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Quickly add YAML metadata for MyST Notebooks}{16}{section.4.3}%
