@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'IntroNB';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -368,6 +370,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-vs-code-files">Notebooks vs code files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-blocks-in-notebooks">Text blocks in notebooks</a></li>
 </ul>
             </nav>
         </div>
@@ -387,7 +390,13 @@ document.write(`
 <h2>Notebooks vs code files<a class="headerlink" href="#notebooks-vs-code-files" title="Permalink to this heading">#</a></h2>
 <p>Traditionally, python coding has been done with individual files (usually with a <code class="docutils literal notranslate"><span class="pre">.py</span></code> extension). These files are edited then sent to a python interpreter to execute the code. More recently, a system based on notebooks has become very popular, particularly for science/engineering applications.</p>
 <p>Both approaches are fine for this module. I prefer the notebook approach for small programming tasks, but still use the <code class="docutils literal notranslate"><span class="pre">.py</span></code> approach for more involved work. These notes are in part written using the notebook approach, but there will be examples of <code class="docutils literal notranslate"><span class="pre">.py</span></code> files for you to explore for the module.</p>
-<p>The code below is an example of python code in a Jupyter notebook - the leading notebook system for python.</p>
+<p>The code below is an example of python code in a Jupyter notebook - the leading notebook system for python. The code has been split into three sections.</p>
+<ul class="simple">
+<li><p>The first section/block imports (bring in) external code libraries to extend what python can do.</p></li>
+<li><p>The second section sets up some parameters</p></li>
+<li><p>The third section does some working out and displays the results</p></li>
+</ul>
+<p>This general format is quite common for a notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code uses stats to generate an array of 1000 points belonging to a normal</span>
@@ -397,14 +406,24 @@ document.write(`
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># +</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># +</span>
 <span class="c1"># Specify the properties of the normal distribution</span>
 <span class="n">n_sample</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">mean</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mi">4</span>
-
-<span class="c1"># Generate an array belonging to the normal distribution</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate an array belonging to the normal distribution</span>
 <span class="n">rand_dist1</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">n_sample</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">)</span><span class="si">:</span><span class="s2">,.4f</span><span class="si">}</span><span class="s2"> and stddev = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">)</span><span class="si">:</span><span class="s2">,.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -419,13 +438,25 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 19.9744 and stddev = 4.0100
-NormaltestResult(statistic=0.3949839304856243, pvalue=0.820786735423353)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 20.1397 and stddev = 4.0195
+NormaltestResult(statistic=6.999056623786855, pvalue=0.030211630528759595)
 </pre></div>
 </div>
-<img alt="_images/45bcf8460177704373e00a1707c480793f34f3a471aabcf9d227811e1a969c49.png" src="_images/45bcf8460177704373e00a1707c480793f34f3a471aabcf9d227811e1a969c49.png" />
+<img alt="_images/ee36fe830d084f90f350d9c319a13fdc6ea42b4e40573878394ae0df1435916a.png" src="_images/ee36fe830d084f90f350d9c319a13fdc6ea42b4e40573878394ae0df1435916a.png" />
 </div>
 </div>
+</section>
+<section id="text-blocks-in-notebooks">
+<h2>Text blocks in notebooks<a class="headerlink" href="#text-blocks-in-notebooks" title="Permalink to this heading">#</a></h2>
+<p>You can also have blocks of text in notebooks. These allow various formatting options:</p>
+<ul class="simple">
+<li><p><strong>Bold</strong></p></li>
+<li><p><em>Itallic</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">highlighted</span></code></p></li>
+</ul>
+<p>And maths is quite easy:
+<span class="math notranslate nohighlight">\( E = mc^2\)</span></p>
+<p>For more details search for “Jupyter Markdown” using your favourite method.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -486,6 +517,7 @@ NormaltestResult(statistic=0.3949839304856243, pvalue=0.820786735423353)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-vs-code-files">Notebooks vs code files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-blocks-in-notebooks">Text blocks in notebooks</a></li>
 </ul>
   </nav></div>
 
