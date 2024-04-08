@@ -407,7 +407,7 @@ document.write(`
 <span class="c1"># Generate an array belonging to the normal distribution</span>
 <span class="n">rand_dist1</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">n_sample</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean and stddev = &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">)</span><span class="si">:</span><span class="s2">,.4f</span><span class="si">}</span><span class="s2"> and stddev = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">)</span><span class="si">:</span><span class="s2">,.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">normaltest</span><span class="p">(</span><span class="n">rand_dist1</span><span class="p">))</span>
 
 <span class="c1"># Plot the histogram of the data and the distribution function</span>
@@ -419,11 +419,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean and stddev =  19.992159050879796 3.9444668453284124
-NormaltestResult(statistic=4.574032326568746, pvalue=0.10156907569144294)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 20.0273 and stddev = 4.0064
+NormaltestResult(statistic=3.116523392804381, pvalue=0.21050166915742366)
 </pre></div>
 </div>
-<img alt="_images/9a99968d55ba97584e56fc049effa3f1877e36a81a2d6336065812fc012ddafb.png" src="_images/9a99968d55ba97584e56fc049effa3f1877e36a81a2d6336065812fc012ddafb.png" />
+<img alt="_images/5a3c3f5e223b734348ac213f756392b889b025af8e7031825c8de72aebd30cc1.png" src="_images/5a3c3f5e223b734348ac213f756392b889b025af8e7031825c8de72aebd30cc1.png" />
 </div>
 </div>
 </section>
