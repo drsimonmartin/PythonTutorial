@@ -14,3 +14,4 @@ Thumbs.db
 ##################
 sandbox
 _build/latex
+_build/jupyter_execute

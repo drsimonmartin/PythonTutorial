@@ -228,7 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/drsimonmartin/PythonTutorial" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -245,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLabExercises.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/drsimonmartin/PythonTutorial/issues/new?title=Issue%20on%20page%20%2FLabExercises.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -436,7 +436,7 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 <section id="week-3-code-hacking">
 <h2>Week 3: Code hacking<a class="headerlink" href="#week-3-code-hacking" title="Permalink to this heading">#</a></h2>
 <p>Modifying existing code to solve a new problem is a useful and effective way to learn programming skills. This week’s problem explores how to make code operate a repeated number of times to generate a useful statistical result.</p>
-<p>The code in the file ‘<a class="reference external" href="http://NormalDistribution.py">NormalDistribution.py</a>’ calculates a set of data associated with a given normal distribution (a normal distribution is completely defined by its mean and standard deviation).</p>
+<p>The code in the file <code class="docutils literal notranslate"><span class="pre">NormalDistribution.py</span></code> calculates a set of data associated with a given normal distribution (a normal distribution is completely defined by its mean and standard deviation).</p>
 <ul class="simple">
 <li><p>Modify this code so that it creates 1,000 such distributions each containing 100 points.</p>
 <ul>
@@ -450,14 +450,14 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 </ul>
 </li>
 </ul>
-<p>In order to achieve these outcomes you should apply the programme development method outlined in the introductory python notes i.e plan the steps before implementing them in python.</p>
+<p>In order to achieve these outcomes you should apply the programme development method outlined in the introductory python notes i.e. plan the steps before implementing them in python.</p>
 </section>
 <section id="week-4-data-fitting">
 <h2>Week 4 Data fitting<a class="headerlink" href="#week-4-data-fitting" title="Permalink to this heading">#</a></h2>
 <section id="ordinary-least-squares-fitting">
 <h3>Ordinary Least Squares fitting<a class="headerlink" href="#ordinary-least-squares-fitting" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Review your previous studies and find some lab data suitable for fitting with a least squares process. If you do not have any readily available use the file ‘LSdata.csv’ which is available on the Learn page</p></li>
+<li><p>Review your previous studies and find some lab data suitable for fitting with a least squares process. If you do not have any readily available use the file <code class="docutils literal notranslate"><span class="pre">LSdata.csv</span></code> which is available on the Learn page</p></li>
 <li><p>Develop a python program that:</p>
 <ol class="arabic simple">
 <li><p>Reads the data in from a .csv, or .xlsx file</p></li>
@@ -485,9 +485,9 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 </section>
 <section id="week-5-code-hacking">
 <h2>Week 5 Code hacking<a class="headerlink" href="#week-5-code-hacking" title="Permalink to this heading">#</a></h2>
-<p>The file ‘<a class="reference external" href="http://SelfAvoidingWalk.py">SelfAvoidingWalk.py</a>’ contains the functions ‘myopic_saw(n)’ and ‘plot_saw(n)’ . The second function calls the first function and plots out the result. The ‘myopic_saw’ function simulates a random walk model of polymers. It uses a grid struture for the polymer bond directions and simulates a chain as being made up of n random steps on the grid. The chain is self avoiding and cannot intersect with itself. The function myopic_saw(n) will halt if a chain cannot add a bond without colliding with itself.</p>
-<p>Adapt ‘plot_saw(n)’ so that it calls myopic_saw(n) repeatedly until it suceeds in generating a self-avoiding-walk of the requested length and then plots this walk out.</p>
-<p>Use n=200 to test you code.</p>
+<p>The file <code class="docutils literal notranslate"><span class="pre">SelfAvoidingWalk.py</span></code> contains the functions <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">plot_saw(n)</span></code> . The second function calls the first function and plots out the result. The ‘myopic_saw’ function simulates a random walk model of polymers. It uses a grid struture for the polymer bond directions and simulates a chain as being made up of n random steps on the grid. The chain is self avoiding and cannot intersect with itself. The function myopic_saw(n) will halt if a chain cannot add a bond without colliding with itself.</p>
+<p>Adapt <code class="docutils literal notranslate"><span class="pre">plot_saw(n)</span></code> so that it calls <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> repeatedly until it suceeds in generating a self-avoiding-walk of the requested length and then plots this walk out.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">n=200</span></code> to test you code. This value is very unlikley to give a complete walk on the first attempt, but is low enough that you will not have to wait for a long time for the code to finish running.</p>
 <section id="bonus-problem">
 <h3>Bonus problem<a class="headerlink" href="#bonus-problem" title="Permalink to this heading">#</a></h3>
 <p>Make a copy of your code and modify it to time how long the function plot_saw(n) takes to run. Hint: google the time library for python.</p>
@@ -496,7 +496,7 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 </section>
 <section id="week-6-getting-responses">
 <h2>Week 6: Getting responses<a class="headerlink" href="#week-6-getting-responses" title="Permalink to this heading">#</a></h2>
-<p>It is useful for a python program to be able to ask for a parameter value to use rather than keep modifying the code each time you run it. The ‘input()’’ function is handy for this.</p>
+<p>It is useful for a python program to be able to ask for a parameter value to use rather than keep modifying the code each time you run it. The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is handy for this.</p>
 <section id="exercises">
 <h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -509,14 +509,14 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 <section id="week-7-symbolic-maths">
 <h2>Week 7: Symbolic Maths<a class="headerlink" href="#week-7-symbolic-maths" title="Permalink to this heading">#</a></h2>
 <p>This week’s exercise explores how to perform symbolic maths in python. We are going to do this using the ‘sympy’ library.</p>
-<p>Read the document CoM_Algebra.pdf (MPP001 Learn page). This is a short set of notes that shows how python can be used to integrate various mathematical expressions.</p>
+<p>Read the document <code class="docutils literal notranslate"><span class="pre">CoM_Algebra.pdf</span></code> (MPP001 Learn page). This is a short set of notes that shows how python can be used to integrate various mathematical expressions.</p>
 <section id="exercise-s">
 <h3>Exercise(s)<a class="headerlink" href="#exercise-s" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Reproduce the maths in the PDF CoM_Algebra.pdf .</p></li>
 <li><p>Change the function(s) that are integrated. Are the results what you expect?</p></li>
 <li><p>Differentiate the results of the integrations you have done. Done you get back to the original expressions?</p></li>
-<li><p>Explore other tools that sympy offers. ‘expand()’ and ‘simplify()’ are good starting points.</p></li>
+<li><p>Explore other tools that sympy offers. <code class="docutils literal notranslate"><span class="pre">expand()</span></code> and <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> are good starting points.</p></li>
 </ol>
 </section>
 </section>
@@ -623,7 +623,7 @@ By Simon Martin
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
