@@ -14,29 +14,43 @@ You might be inclined to use the search box to find/start python items. The prob
 
 
 ## Python on you own computer
-You can install Python on your own computer. I recommend the Anaconda distribution <https://www.anaconda.com>. It contains everything you need for this module and a lot more. Installers are available for Windows, MacOS, and Linux. If disk space is a premium for you then search on the Anaconda site for the 'miniconda' version which contains the basics and there is an easy way to add any extras that you need.
+You can install Python on your own computer. The computers in the teaching labs use the Anaconda distribution <https://www.anaconda.com>. It contains a lot of useful python packages and a lot more. It is free for educations use and installers are available for Windows, MacOS, and Linux. If disk space is a premium for you then search on the Anaconda site for the 'miniconda' version which contains the basics and there is an easy way to add any extras that you need.
 
-Other versions of python are available. If you do not use Anaconda do make sure you are installing a one of the Python 3 variations (I advise using version 3.8 or higher). Python 2 is still available, but has some significant differences.
+### Python for research
+The Anaconda Python distribution is **NOT** free for research (or commercial) use. I use the conda-forge distribution instead, this provides a very similar experiance to the Anaconda distribution.
 
-MacOS (and many Linux versions) come with a version of Python however these versions often lack the science libraries needed for this module and it is generally easier to install Anaconda.
+Other versions of python are available. If you do not use Anaconda/conda-forge then do make sure you are installing a one of the Python 3 variations (I advise using version 3.8 or higher). Python 2 is still available, but has some significant differences.
 
-Anaconda also comes with a range of tools for editing and running python code. Spyder is probably the best (free) choice for science/engineering. You can install it separately or as part of the Anaconda installation.
+MacOS (and many Linux versions) come with a version of Python however these versions often lack the science libraries needed for this module and it is generally easier to install Anaconda/conda-forge.
 
-Another excellent choice is pyCharm.
+Anaconda also comes with a range of tools for editing and running python code. Spyder is probably the best (free) choice for editing science/engineering code. You can install it separately or as part of the Anaconda installation. Another excellent choice is pyCharm.
 
 
 # First steps in Python
 The easiest way to get started with python is to launch the Anaconda Navigator app. You then have to choose whether to use the file based ('.py') or notebook approach. I recommend you take the time to try both.
 
+## Notebook-based python
+
+
+
+If you didn't fancy the guide given in the link on the Welcome page then have a quick look here: [Jupyter notebooks](https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-a-jupyter-notebook)
+
+### Exercise:
+Modify the example in the link above so that it gives the "Hello World!" greeting.
+
+### Quick way to run cells
+Clicking the Run cell button is fine, but you can save time by pressing the Shift key at the same time as pressing the Return key. This will run whichever cell the cursor is in.
+
+This means that you can go back to a cell, edit it, and re-run just that cell. If you use a '.py' file approach then all the code has to be re-run when you make a modification.
+
+
 ## file-based python
 
 Follow the instructions here: [Spyder](https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-spyder)
 
-## Notebook-based python
 
-Follow the instructions here: [Jupyter notebooks](https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-a-jupyter-notebook)
 
-## Hello World!
+### Hello World!
 (in Spyder) In the console window (bottom left) you should see a prompt that looks something like this:
 
 ```
@@ -52,6 +66,15 @@ print('Hello world!')
 What do you think this code does? Press the return key and find out if you were right...
 
 The code calls the `print` function telling it you want 'Hello world!' to appear on the screen. In python anything inside quotes (single or double) are examples of strings and are just text information.
+
+You can use the console view to enter python commands one line at a time. This is fine when you have a line or two to deal with, but in the long run a file based approach is needed and in most cases the Jupyter notebook is the best option.
+
+### Working with files
+So far, we have typed in code to a python session and observed the results. For anything involving more than two or three lines of code we need a way to save/recall code. Python code is stored in files with names that end in `.py` - this is the equivalent of `.docx` for Word files.
+
+The left hand section of the screen in Spyder is for entering and editing code (usually python). You can enter python code over multiple lines. 
+
+To run the code, first save the file, then click the triangle at the middle/top of the screen section. The results of most of your code will appear in the console window. Any graphs/images you work with will appear in the section above the console.
 
 ## Simple maths in python
 Python has a range of standard mathematical functions as sumarised in the table below. If you have used something like Excel for maths then you should be familiar with them. Try to predict the outcomes of the examples given before entering them into your python system. Do they give the results you expected?

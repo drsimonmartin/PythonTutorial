@@ -381,7 +381,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-5-code-hacking">Week 5 Code hacking</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problem">Bonus problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problems">Bonus problems</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-6-getting-responses">Week 6: Getting responses</a><ul class="nav section-nav flex-column">
@@ -485,13 +485,21 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 </section>
 <section id="week-5-code-hacking">
 <h2>Week 5 Code hacking<a class="headerlink" href="#week-5-code-hacking" title="Permalink to this heading">#</a></h2>
-<p>The file <code class="docutils literal notranslate"><span class="pre">SelfAvoidingWalk.py</span></code> contains the functions <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">plot_saw(n)</span></code> . The second function calls the first function and plots out the result. The ‘myopic_saw’ function simulates a random walk model of polymers. It uses a grid struture for the polymer bond directions and simulates a chain as being made up of n random steps on the grid. The chain is self avoiding and cannot intersect with itself. The function myopic_saw(n) will halt if a chain cannot add a bond without colliding with itself.</p>
+<p>Another task based on modifying code. This problem will help you explore how to use a loop other than the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>The file <code class="docutils literal notranslate"><span class="pre">SelfAvoidingWalk.py</span></code> contains the functions <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">plot_saw(n)</span></code> . The second function calls the first function and plots out the result. The ‘myopic_saw’ function simulates a random walk model of polymers. It uses a grid struture for the polymer bond directions and simulates a chain as being made up of n random steps on the grid. The chain is self avoiding and cannot intersect with itself. The function <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> will halt if a chain cannot add a bond without colliding with itself.</p>
+<p>This image shows an example of a self-avoiding-walk of 50 steps:
+<img alt="A self avoiding walk" src="_images/SAW50.png" /></p>
 <p>Adapt <code class="docutils literal notranslate"><span class="pre">plot_saw(n)</span></code> so that it calls <code class="docutils literal notranslate"><span class="pre">myopic_saw(n)</span></code> repeatedly until it suceeds in generating a self-avoiding-walk of the requested length and then plots this walk out.</p>
-<p>Use <code class="docutils literal notranslate"><span class="pre">n=200</span></code> to test you code. This value is very unlikley to give a complete walk on the first attempt, but is low enough that you will not have to wait for a long time for the code to finish running.</p>
-<section id="bonus-problem">
-<h3>Bonus problem<a class="headerlink" href="#bonus-problem" title="Permalink to this heading">#</a></h3>
-<p>Make a copy of your code and modify it to time how long the function plot_saw(n) takes to run. Hint: google the time library for python.</p>
+<p>Use a value <code class="docutils literal notranslate"><span class="pre">n=200</span></code> to test your code. This value is very unlikley to give a complete walk on the first attempt, but is low enough that you will not have to wait for a long time for the code to finish running.</p>
+<section id="bonus-problems">
+<h3>Bonus problems<a class="headerlink" href="#bonus-problems" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Make a copy of your code and modify it to time how long the function plot_saw(n) takes to run. Hint: google the <code class="docutils literal notranslate"><span class="pre">time</span></code> library for python.</p></li>
+</ol>
 <p>Time how long it takes to find chains of 10, 100, and 1000 units in length. For each length produce the average time taken.</p>
+<ol class="arabic simple" start="2">
+<li><p>Explore modifying the colour scheme used in the plot(s). What inclusivity factors should you take into account when using colors?</p></li>
+</ol>
 </section>
 </section>
 <section id="week-6-getting-responses">
@@ -588,7 +596,7 @@ X = \frac{\begin{vmatrix}p &amp; b\\q &amp;d\end{vmatrix}}{\begin{vmatrix}a &amp
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-5-code-hacking">Week 5 Code hacking</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problem">Bonus problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-problems">Bonus problems</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-6-getting-responses">Week 6: Getting responses</a><ul class="nav section-nav flex-column">

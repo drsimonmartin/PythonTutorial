@@ -98,12 +98,7 @@ Now more complex problems will require more stages and you may go through three 
 
 You may feel that you want to jump into coding after Stage One and a lot of the time this will work OK for simple problems. However, it is good to get into the habit of doing both steps you will benefit in the medium term–especially if you want to evidence code development for your project.
 
-## Working with files
-So far, we have typed in code to a python session and observed the results. For anything involving more than two or three lines of code we need a way to save/recall code. Python code is stored in files with names that end in `.py` - this is the equivalent of `.docx` for Word files.
 
-The left hand section of the screen in Spyder is for entering and editing code (usually python). You can enter python code over multiple lines. 
-
-To run the code, first save the file, then click the triangle at the middle/top of the screen section. The results of most of your code will appear in the console window. Any graphs/images you work with will appear in the section above the console.
 
 ## The building blocks of computer code
 In order to get a program with a useful level of complexity there are a few key building blocks. These are common to most computer languages (there will be syntax differences–for instance, python uses indentation of code to separate blocks whilst many others use curly brackets i.e. {}. The ones key to introductory python programming are described below.

@@ -373,13 +373,22 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-sure-you-have-the-right-python-version">Make sure you have the right Python version</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-on-you-own-computer">Python on you own computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-on-you-own-computer">Python on you own computer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-research">Python for research</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-in-python">First steps in Python</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-based-python">file-based python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-based-python">Notebook-based python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-based-python">Notebook-based python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-way-to-run-cells">Quick way to run cells</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-based-python">file-based python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-maths-in-python">Simple maths in python</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-simple-maths">Beyond simple maths</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-library-name"><code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">library_name</span></code></a></li>
@@ -415,26 +424,37 @@ document.write(`
 </section>
 <section id="python-on-you-own-computer">
 <h2>Python on you own computer<a class="headerlink" href="#python-on-you-own-computer" title="Permalink to this heading">#</a></h2>
-<p>You can install Python on your own computer. I recommend the Anaconda distribution <a class="reference external" href="https://www.anaconda.com">https://www.anaconda.com</a>. It contains everything you need for this module and a lot more. Installers are available for Windows, MacOS, and Linux. If disk space is a premium for you then search on the Anaconda site for the ‘miniconda’ version which contains the basics and there is an easy way to add any extras that you need.</p>
-<p>Other versions of python are available. If you do not use Anaconda do make sure you are installing a one of the Python 3 variations (I advise using version 3.8 or higher). Python 2 is still available, but has some significant differences.</p>
-<p>MacOS (and many Linux versions) come with a version of Python however these versions often lack the science libraries needed for this module and it is generally easier to install Anaconda.</p>
-<p>Anaconda also comes with a range of tools for editing and running python code. Spyder is probably the best (free) choice for science/engineering. You can install it separately or as part of the Anaconda installation.</p>
-<p>Another excellent choice is pyCharm.</p>
+<p>You can install Python on your own computer. The computers in the teaching labs use the Anaconda distribution <a class="reference external" href="https://www.anaconda.com">https://www.anaconda.com</a>. It contains a lot of useful python packages and a lot more. It is free for educations use and installers are available for Windows, MacOS, and Linux. If disk space is a premium for you then search on the Anaconda site for the ‘miniconda’ version which contains the basics and there is an easy way to add any extras that you need.</p>
+<section id="python-for-research">
+<h3>Python for research<a class="headerlink" href="#python-for-research" title="Permalink to this heading">#</a></h3>
+<p>The Anaconda Python distribution is <strong>NOT</strong> free for research (or commercial) use. I use the conda-forge distribution instead, this provides a very similar experiance to the Anaconda distribution.</p>
+<p>Other versions of python are available. If you do not use Anaconda/conda-forge then do make sure you are installing a one of the Python 3 variations (I advise using version 3.8 or higher). Python 2 is still available, but has some significant differences.</p>
+<p>MacOS (and many Linux versions) come with a version of Python however these versions often lack the science libraries needed for this module and it is generally easier to install Anaconda/conda-forge.</p>
+<p>Anaconda also comes with a range of tools for editing and running python code. Spyder is probably the best (free) choice for editing science/engineering code. You can install it separately or as part of the Anaconda installation. Another excellent choice is pyCharm.</p>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-python">
 <h1>First steps in Python<a class="headerlink" href="#first-steps-in-python" title="Permalink to this heading">#</a></h1>
 <p>The easiest way to get started with python is to launch the Anaconda Navigator app. You then have to choose whether to use the file based (‘.py’) or notebook approach. I recommend you take the time to try both.</p>
-<section id="file-based-python">
-<h2>file-based python<a class="headerlink" href="#file-based-python" title="Permalink to this heading">#</a></h2>
-<p>Follow the instructions here: <a class="reference external" href="https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-spyder">Spyder</a></p>
-</section>
 <section id="notebook-based-python">
 <h2>Notebook-based python<a class="headerlink" href="#notebook-based-python" title="Permalink to this heading">#</a></h2>
 <p>Follow the instructions here: <a class="reference external" href="https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-a-jupyter-notebook">Jupyter notebooks</a></p>
+<section id="exercise">
+<h3>Exercise:<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h3>
+<p>Modify the example in the link above so that it gives the “Hello World!” greeting.</p>
 </section>
+<section id="quick-way-to-run-cells">
+<h3>Quick way to run cells<a class="headerlink" href="#quick-way-to-run-cells" title="Permalink to this heading">#</a></h3>
+<p>Clicking the Run cell button is fine, but you can save time by pressing the Shift key at the same time as pressing the Return key. This will run whichever cell the cursor is in.</p>
+<p>This means that you can go back to a cell, edit it, and re-run just that cell. If you use a ‘.py’ file approach then all the code has to be re-run when you make a modification.</p>
+</section>
+</section>
+<section id="file-based-python">
+<h2>file-based python<a class="headerlink" href="#file-based-python" title="Permalink to this heading">#</a></h2>
+<p>Follow the instructions here: <a class="reference external" href="https://docs.anaconda.com/free/anaconda/getting-started/hello-world/#run-python-in-spyder">Spyder</a></p>
 <section id="hello-world">
-<h2>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this heading">#</a></h2>
+<h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this heading">#</a></h3>
 <p>(in Spyder) In the console window (bottom left) you should see a prompt that looks something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
 </pre></div>
@@ -445,6 +465,8 @@ document.write(`
 </div>
 <p>What do you think this code does? Press the return key and find out if you were right…</p>
 <p>The code calls the <code class="docutils literal notranslate"><span class="pre">print</span></code> function telling it you want ‘Hello world!’ to appear on the screen. In python anything inside quotes (single or double) are examples of strings and are just text information.</p>
+<p>You can use the console view to enter python commands one line at a time. This is fine when you have a line or two to deal with, but in the long run a file based approach is needed and in most cases the Jupyter notebook is the best option.</p>
+</section>
 </section>
 <section id="simple-maths-in-python">
 <h2>Simple maths in python<a class="headerlink" href="#simple-maths-in-python" title="Permalink to this heading">#</a></h2>
@@ -613,13 +635,22 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-sure-you-have-the-right-python-version">Make sure you have the right Python version</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-on-you-own-computer">Python on you own computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-on-you-own-computer">Python on you own computer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-research">Python for research</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-in-python">First steps in Python</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-based-python">file-based python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-based-python">Notebook-based python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-based-python">Notebook-based python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-way-to-run-cells">Quick way to run cells</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-based-python">file-based python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-maths-in-python">Simple maths in python</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-simple-maths">Beyond simple maths</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-library-name"><code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">library_name</span></code></a></li>
